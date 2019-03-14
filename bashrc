@@ -93,7 +93,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # for systems that don't have tree installed...
-alias ftree='find . \( ! -regex '"'"'.*/\..*'"'"' \) -print | sed -e '"'"'s;[^/]*/;|____;g;s;____|; |;g'"'"
+alias ftree="find . \( ! -regex '.*/\..*' \) -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

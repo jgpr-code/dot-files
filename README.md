@@ -7,3 +7,4 @@ dot files:
 
 other:
 - installiere_neo (http://wiki.neo-layout.org/wiki/Neo%20unter%20Linux%20einrichten/Installscript)
+  This script seems to work best with the xfce window managers...

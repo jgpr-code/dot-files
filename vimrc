@@ -82,9 +82,11 @@ augroup autoformat_settings
   " Alternative: autocmd FileType python AutoFormatBuffer autopep8
 augroup END
 
+
 " YCM options
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_insertion = 1
+map <F9> :YcmCompleter FixIt<CR>
 
 " Some more 'classic' settings
 set nobackup

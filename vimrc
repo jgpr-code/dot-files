@@ -79,7 +79,12 @@ autocmd! BufNewFile,BufRead *.vs.glsl,*.fs.glsl set ft=glsl
 " autocmd StdinReadPre * let s:std_in=1
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " nnoremap <C-n> :NERDTreeFocus<CR>
+let g:NERDTreeQuitOnOpen = 1
 nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-Right> <C-w>l
+nnoremap <C-Left> <C-w>h
+nnoremap <C-Up> <C-w>k
+nnoremap <C-Down> <C-w>j
 
 " vanilla indentation for .tex files
 autocmd BufWrite *.tex :execute "normal! gg=G\<C-o>\<C-o>zz"

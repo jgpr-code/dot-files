@@ -1,6 +1,6 @@
+" Start with Plugin Manager (Vundle)
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -25,14 +25,27 @@ Plugin 'google/vim-codefmt'
 " `:help :Glaive` for usage.
 Plugin 'google/vim-glaive'
 
+" NOTE: YouCompleteMe has huge RAM requirements so by default disabled
 " YouCompleteMe has a compiled component, so use:
 " cd ~/.vim/bundle/YouCompleteMe
 " python3 install.py --clang-completer
-Plugin 'Valloric/YouCompleteMe'
-
+" Plugin 'Valloric/YouCompleteMe'
+"
 " Adds some useful vim commands to automatically generate YCM extra conf from
 " CMakeLists for example
-Plugin 'rdnetto/YCM-Generator'
+" Plugin 'rdnetto/YCM-Generator'
+
+" Cooler Status Line
+Plugin 'vim-airline/vim-airline'
+
+" Tab key for vim completion
+Plugin 'ajh17/VimCompletesMe'
+
+" Automatically generate tag files and manage them for jumps with :tag
+Plugin 'ludovicchabant/vim-gutentags'
+
+" Fold plugin, don't know yet if useful
+Plugin 'pseewald/vim-anyfold'
 
 " try out this plugin
 Plugin 'lervag/vimtex'
@@ -62,9 +75,11 @@ filetype plugin indent on    " required
 autocmd! BufNewFile,BufRead *.vs.glsl,*.fs.glsl set ft=glsl
 
 " NERDTree automatics if no files were specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Note: Now start vim with plain vim, not vim .
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" nnoremap <C-n> :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 " vanilla indentation for .tex files
 autocmd BufWrite *.tex :execute "normal! gg=G\<C-o>\<C-o>zz"
@@ -82,15 +97,13 @@ augroup autoformat_settings
   " Alternative: autocmd FileType python AutoFormatBuffer autopep8
 augroup END
 
-
 " YCM options
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_autoclose_preview_window_after_insertion = 1
-map <F9> :YcmCompleter FixIt<CR>
+" let g:ycm_confirm_extra_conf = 0
+" let g:ycm_autoclose_preview_window_after_insertion = 1
+" map <F9> :YcmCompleter FixIt<CR>
 
 " Some more 'classic' settings
 set nobackup
-" set noswapfile
 set mouse=a
 set number
 set expandtab

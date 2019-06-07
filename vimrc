@@ -76,11 +76,11 @@ autocmd! BufNewFile,BufRead *.vs.glsl,*.fs.glsl set ft=glsl
 
 " NERDTree automatics if no files were specified
 " Note: Now start vim with plain vim, not vim .
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" nnoremap <C-n> :NERDTreeFocus<CR>
-let g:NERDTreeQuitOnOpen = 1
-nnoremap <C-n> :NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+nnoremap <C-n> :NERDTreeFocus<CR>
+" let g:NERDTreeQuitOnOpen = 1
+" nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-Right> <C-w>l
 nnoremap <C-Left> <C-w>h
 nnoremap <C-Up> <C-w>k

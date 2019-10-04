@@ -471,6 +471,9 @@ before packages are loaded."
   ;; Configure where org looks for TODOs
   (setq org-agenda-files (list "~/org/todo.org"
                                "~/org/tutorials.org"))
+  ;; Configure a basic clock
+  (setq display-time-24hr-format t)
+  (display-time-mode 1)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

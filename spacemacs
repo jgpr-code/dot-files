@@ -474,6 +474,9 @@ before packages are loaded."
   ;; Configure a basic clock
   (setq display-time-24hr-format t)
   (display-time-mode 1)
+  ;; Disable spell checking by default because I sometimes work
+  ;; with german language. To enable it again use SPC t S
+  (setq spell-checking-enable-by-default nil)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

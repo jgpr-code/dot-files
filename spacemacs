@@ -472,6 +472,9 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   ;; Configure where org looks for TODOs
   (setq org-agenda-files (list "~/org/gtd.org"))
+  ;; Configure what are targets for org-refile
+  ;; Use everything in the current buffer up to level
+  (setq org-refile-targets '((nil :maxlevel . 9)))
   ;; Configure a basic clock
   (setq display-time-24hr-format t)
   (display-time-mode 1)

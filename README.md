@@ -1,10 +1,8 @@
 # dot_files
-important dot configuration files and some other config stuff:
+
+Some dot files of my linux use in the past. All of them no longer in active use (as of 2025-06-18).
 
 dot files:
 - vimrc
 - bashrc
-
-other:
-- installiere_neo (http://wiki.neo-layout.org/wiki/Neo%20unter%20Linux%20einrichten/Installscript)
-  This script seems to work best with the xfce window managers...
+- spacemacs
